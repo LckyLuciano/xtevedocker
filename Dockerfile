@@ -19,7 +19,7 @@ RUN rm /tmp/xteve_linux_amd64.zip
 
 # Add user for VLC and ffmpeg
 # added the UID to help with permission conflicts in ubuntu
-RUN addgroup -S xteve && adduser -S xteve -u 1000 -G xteve
+RUN addgroup -g 1000 -S xteve && adduser -S xteve -u 1000 -G xteve
 
 # Set executable permissions
 RUN chmod +x /xteve/xteve
